@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section id="home" className="relative w-full h-[70vh] min-h-[500px]">
+        <section id="home" className="relative w-full h-screen min-h-[600px]">
             <Image
                 src="/assets/home-banner.jpg"
                 alt="Bhartiya City Nikoo Homes"

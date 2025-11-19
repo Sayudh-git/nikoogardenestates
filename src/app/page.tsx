@@ -8,6 +8,7 @@ import QuickInfoBar from "@/components/QuickInfoBar";
 import Amenities from "@/components/Amenities";
 import Gallery from "@/components/Gallery";
 import LocationSection from "@/components/LocationSection";
+import Landmarks from "@/components/Landmarks";
 import VideoSection from "@/components/VideoSection";
 import BottomCTA from "@/components/BottomCTA";
 import Footer from "@/components/Footer";
@@ -26,6 +27,7 @@ export default function Home() {
       <Amenities />
       <Gallery />
       <LocationSection />
+      <Landmarks />
       <VideoSection />
       <BottomCTA />
       <Footer />
