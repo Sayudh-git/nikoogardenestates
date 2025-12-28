@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
+import { useContactModal } from "@/contexts/ContactModalContext";
 
 export default function BottomCTA() {
+    const { openModal } = useContactModal();
     return (
         <section className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
             {/* Background Image - Full Width */}
@@ -18,7 +22,10 @@ export default function BottomCTA() {
                     <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 leading-tight">
                         Schedule your<br />visit to come home.
                     </h2>
-                    <button className="bg-primary text-white uppercase font-bold py-4 px-10 hover:bg-primary/90 transition-colors text-lg shadow-lg">
+                    <button 
+                        onClick={openModal}
+                        className="bg-primary text-white uppercase font-bold py-4 px-10 hover:bg-primary/90 transition-colors text-lg shadow-lg"
+                    >
                         I AM INTERESTED
                     </button>
                 </div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { MapPin, Building2, Landmark } from "lucide-react";
+import { useContactModal } from "@/contexts/ContactModalContext";
 
 export default function About() {
+    const { openModal } = useContactModal();
     return (
         <section id="about" className="py-20 bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50">
             <div className="container mx-auto px-4">
@@ -28,13 +30,13 @@ export default function About() {
                             Estate reflects the developer's unwavering commitment to
                             excellence.
                         </p>
-                        <a
-                            href="#contact"
+                        <button
+                            onClick={openModal}
                             className="inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-gold text-foreground font-semibold hover:shadow-2xl hover:scale-105 transition-all duration-300"
                         >
                             Get A CallBack
                             <span>→</span>
-                        </a>
+                        </button>
                     </div>
 
                     {/* Landmarks */}

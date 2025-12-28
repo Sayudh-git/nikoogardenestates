@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from 'next/font/google';
+import { ContactModalProvider } from "@/contexts/ContactModalContext";
+
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-montserrat',
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
@@ -19,15 +29,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={montserrat.variable}>
+      <body className={montserrat.className}>
+        <ContactModalProvider>
+          {children}
+        </ContactModalProvider>
       </body>
     </html>
   );

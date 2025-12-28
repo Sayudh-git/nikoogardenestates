@@ -23,18 +23,24 @@ export default function LocationSection() {
                     </div>
                 </div>
 
-                {/* Find Your Way Home */}
-                <div className="text-center">
-                    <h3 className="text-3xl font-bold text-foreground mb-6">
-                        FIND YOUR WAY HOME
+                {/* Find Your Way Home Section */}
+                <div className="mb-12">
+                    <h3 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-8 uppercase">
+                        FIND YOUR WAY HOME. FIND YOUR WAY TO HAPPINESS.
                     </h3>
-                    <div className="relative w-full h-[500px] rounded-lg overflow-hidden shadow-lg">
+                    
+                    <div className="relative w-full h-[500px] md:h-[600px]">
                         <Image
                             src="/assets/maps.jpg"
                             alt="Location Map"
                             fill
-                            className="object-contain bg-gray-50"
+                            className="object-contain"
                         />
+                        
+                        {/* Disclaimer */}
+                        <div className="absolute bottom-4 right-4 bg-white/90 px-3 py-1 rounded text-xs text-gray-600">
+                            Disclaimer: Map is not to scale and shows approximate locations only
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2,6 +2,9 @@ export default function VideoSection() {
     return (
         <section className="py-20 bg-secondary">
             <div className="container mx-auto px-4 lg:px-8">
+                <h2 className="text-4xl md:text-5xl font-bold text-center text-foreground mb-12 uppercase">
+                    The Nikoo Story
+                </h2>
                 <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {/* Video 1 */}
                     <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -28,7 +31,7 @@ export default function VideoSection() {
                             <iframe
                                 width="100%"
                                 height="100%"
-                                src="https://www.youtube.com/embed/tFdaC1u_KjQ"
+                                src="https://www.youtube.com/embed/F3iZW2_G_3o"
                                 title="Happy Nikoo Family - Part 2"
                                 frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

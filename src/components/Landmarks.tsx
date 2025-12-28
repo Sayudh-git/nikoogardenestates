@@ -1,6 +1,10 @@
+"use client";
+
 import { Mountain, Plane, Building2, Train, ShoppingBag, MapPin } from "lucide-react";
+import { useContactModal } from "@/contexts/ContactModalContext";
 
 export default function Landmarks() {
+    const { openModal } = useContactModal();
     const landmarks = [
         {
             icon: Mountain,
@@ -16,7 +20,7 @@ export default function Landmarks() {
         },
         {
             icon: Building2,
-            text: "JW MARRIOT 500 MTRS",
+            text: "JW MARRIOTT 500 MTRS",
         },
         {
             icon: ShoppingBag,
@@ -52,7 +56,10 @@ export default function Landmarks() {
                 </div>
 
                 <div className="text-center">
-                    <button className="px-8 py-4 bg-primary text-white font-bold uppercase hover:bg-primary/90 transition-colors shadow-lg">
+                    <button 
+                        onClick={openModal}
+                        className="px-8 py-4 bg-primary text-white font-bold uppercase hover:bg-primary/90 transition-colors shadow-lg"
+                    >
                         DOWNLOAD BHARTIYA GARDEN ESTATE BROCHURE
                     </button>
                 </div>
